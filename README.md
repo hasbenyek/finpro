@@ -13,8 +13,10 @@ Dalam Repository ini, saya akan mengimplementasikan 5 layanan server yang terdir
 ### 1.1 Instalasi SSH
 1. Lakukan instalasi paket SSH dengan mengetik perintah
 ```
-sudo apt-get install
+sudo apt-get install openssh-server
 ```
+![image](https://github.com/user-attachments/assets/51108d19-d5f1-4186-8153-5e6e5bf4a2fb)
+
 ### 1.2 Konfigurasi SSH
 1. Ketik perintah untuk mengedit konfigurasi
 ```
