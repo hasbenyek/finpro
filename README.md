@@ -8,7 +8,7 @@ Dalam Repository ini, saya akan mengimplementasikan beberapa layanan server yang
 <a href="#rsy">4. Rsync + cron</a> <br>
 <a href="#mon">5. Netdata</a> <br>
 <a href="#apache">6. Apache</a> <br>
-<a href="#test">6. Uji Coba Server</a> <br>
+<a href="#test">Uji Coba Server</a> <br>
 
 <h2 id="ssh">1. Instalasi dan Konfigurasi SSH</h2>
 
