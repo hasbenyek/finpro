@@ -1,5 +1,5 @@
 # Building Minecraft Server - Final Project OS Server dan Sistem Admin 23.83.1018
-Dalam Repository ini, saya akan mengimplementasikan 5 layanan server yang terdiri dari :
+Dalam Repository ini, saya akan mengimplementasikan beberapa layanan server yang terdiri dari :
 
 ## Layanan Server
 <a href="#ssh">1. SSH</a> <br>
@@ -8,6 +8,7 @@ Dalam Repository ini, saya akan mengimplementasikan 5 layanan server yang terdir
 <a href="#rsy">4. Rsync + cron</a> <br>
 <a href="#mon">5. Netdata</a> <br>
 <a href="#apache">6. Apache</a> <br>
+<a href="#test">6. Uji Coba Server</a> <br>
 
 <h2 id="ssh">1. Instalasi dan Konfigurasi SSH</h2>
 
@@ -97,7 +98,7 @@ sudo apt install screen
 ```
 ![image](https://github.com/user-attachments/assets/c06f62ec-464a-4ac8-bafe-374e3183e92b)
 
-8. Jalankan Server untuk Pertama kalinya
+8. Jalankan Server untuk Pertama kalinya (Untuk tahapan ini, disarankan untuk dijalankan setelah semua langkah-langkah sudah terpenuhi)
 ```
 screen -S minecraft
 java -Xmx1024M -Xms1024M -jar server.jar nogui
@@ -239,4 +240,18 @@ Untuk mengedit isi web-nya, kamu bisa masuk ke
 sudo nano /var/www/html/index.html
 ```
 Untuk mengisi web-nya, bisa disesuaikan dengan preferensi kamu sendiri
+
+<h2 id="test">UJI COBA SERVER</h2>
+
+1. Masukkan IP Address Server ke dalam Game Minecraft. <br> <br>
+![IP Address](https://github.com/user-attachments/assets/77115da3-0f31-421d-bce3-2b9476ef9b0e)
+
+2. Player Berhasil bergabung ke Server. <br> <br>
+![Player Berhasil Bergabung](https://github.com/user-attachments/assets/7bcbba02-bcf9-4f87-8332-bf6e54ffc6dd)
+
+**JIKA ADA ERROR FAILED TO VERIFY USERNAME!** Kamu harus masuk kedalam file konfigurasi servernya:
+```
+nano ~/minecraft/server.properties
+```
+lalu ubah baris `online-mode=True` menjadi `online-mode=false`. 
 
