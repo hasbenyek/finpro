@@ -7,7 +7,7 @@ Dalam Repository ini, saya akan mengimplementasikan 5 layanan server yang terdir
 <a href="#ufw">3. UFW/Firewall</a> <br>
 <a href="#rsy">4. Rsync + cron</a> <br>
 <a href="#mon">5. Netdata</a> <br>
-~~<a href="#ngi">5. Nginx</a> <br>~~
+<a href="#apache">6. Apache</a> <br>
 
 <h2 id="ssh">1. Instalasi dan Konfigurasi SSH</h2>
 
@@ -210,15 +210,33 @@ systemctl restart netdata
 7. Akses `<alamat ip kamu>:19999` pada web browser. <br>
 ![image](https://github.com/user-attachments/assets/8f017c6a-c5f8-4236-aad1-dab3d74d1998)
 
-~~<h2 id="ngi">6. Layanan Web Server Nginx</h2>~~
+<h2 id="apache">6. Layanan Web Server Apache</h2>
 
-~~1. Install Nginx~~
+1. Install APACHE terlebih dahulu
 ```
-sudo apt install nginx -y
+sudo apt install apache2 -y
 ```
-~~![image](https://github.com/user-attachments/assets/cf2e42fb-0a06-46fd-a107-5077fc7782c7)~~
+![image](https://github.com/user-attachments/assets/5d6e2aeb-5cfb-43b5-ad92-85023c7370c6)
 
-~~2. Buat page sederhana untuk server Minecraft kamu~~
+2. Pastikan apache telah aktif dengan mengetik perintah:
 ```
-echo "Server Minecraft Sedang Berjalan!" | sudo tee /var/www/html/index.html
+sudo systemctl status apache
 ```
+![image](https://github.com/user-attachments/assets/b7fedaab-fb16-4309-818d-7bcf07ed562c)
+
+3. Berikan izin firewall kepada Apache agar dapat diakses
+```
+sudo ufw allow 'Apache'
+sudo ufw enable
+sudo ufw status
+```
+![image](https://github.com/user-attachments/assets/e1422603-2117-4126-b7da-3d0484dc5bb0)
+
+4. Buka alamat ip kamu di web browser dan pastikan apache dapat diakses. <br>
+![image](https://github.com/user-attachments/assets/166b514a-98c6-40cb-ad8c-b7297a0d9927) <br>
+Untuk mengedit isi web-nya, kamu bisa masuk ke
+```
+sudo nano /var/www/html/index.html
+```
+Untuk mengisi web-nya, bisa disesuaikan dengan preferensi kamu sendiri
+
