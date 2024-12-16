@@ -1,5 +1,8 @@
 # Building Minecraft Server - Final Project OS Server dan Sistem Admin 23.83.1018
-Untuk spesifikasi server yang saya gunakan, saya memberikan alokasi RAM sebesar 4GB dengan storage 50GB, serta prosesor yang diberikan sebesar 4 core. Dalam Repository ini, saya akan mengimplementasikan beberapa layanan server yang terdiri dari :
+Untuk spesifikasi server yang saya gunakan, saya memberikan alokasi RAM sebesar 4GB dengan storage 50GB, serta prosesor yang diberikan sebesar 4 core. <br> <br>
+![image](https://github.com/user-attachments/assets/ba9bcdb1-c5c3-4dcf-8341-4d5d5d1cf85e)
+
+Dalam Repository ini, saya akan mengimplementasikan beberapa layanan server yang terdiri dari :
 
 ## Layanan Server
 <a href="#ssh">1. SSH</a> <br>
